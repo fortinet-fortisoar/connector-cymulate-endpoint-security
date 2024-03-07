@@ -1,0 +1,468 @@
+{
+  "name": "cymulate-endpoint-security",
+  "label": "Cymulate Endpoint Security - BAS",
+  "version": "1.0.0",
+  "description": "The Cymulate Exposure Management and Security Validation Platform provides the technology for exposure\ndiscovery, validation, and prioritization with business insights and intelligence. This simplifies security leaders’ risk\nand resilience to emergent threats and a rapidly changing attack surface. With a complete view of the security\nposture and business risks, the Cymulate platform gives security leaders the data they need to define the scope for cyber initiatives, successfully mobilize mitigations, and continuously assess security operations performance.",
+  "publisher": "Fortinet",
+  "cs_approved": false,
+  "cs_compatible": true,
+  "category": "Attack Surface Management",
+  "icon_small_name": "small.png",
+  "icon_large_name": "large.png",
+  "help_online": "https://github.com/fortinet-fortisoar/cymulate-endpoint-security/blob/release/1.0.0/docs/CymulateEndpointSecurityBASConnectorDoc.md",
+  "configuration": {
+    "fields": [
+      {
+        "name": "url",
+        "title": "Server URL",
+        "type": "text",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "description": "Specify the Cymulate server URL to connect and perform the automated operations.",
+        "placeholder": "https://api.app.cymulate.com"
+      },
+      {
+        "name": "key",
+        "title": "Secret Key",
+        "type": "password",
+        "editable": true,
+        "visible": true,
+        "required": true,
+        "tooltip": "Specify the Secret Key of the API Application already created in the Cymulate Server.",
+        "description": "Specify the Secret Key of the API Application already created in the Cymulate Server."
+      },
+      {
+        "name": "verify_ssl",
+        "title": "Verify SSL",
+        "type": "checkbox",
+        "editable": true,
+        "visible": true,
+        "required": false,
+        "value": true,
+        "description": "Specifies whether the SSL certificate for the server is to be verified. \nBy default, this option is set to True."
+      }
+    ]
+  },
+  "operations": [
+    {
+      "operation": "create_assessment",
+      "title": "Create Assessment",
+      "annotation": "create_assessment",
+      "description": "Creates an Endpoint Security assessment based on the input parameters values provided.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "agentName",
+          "title": "Agent Name",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the agent name (Computer Name).",
+          "description": "Specify the agent name (Computer Name)."
+        },
+        {
+          "name": "agentProfileName",
+          "title": "Agent Profile Name",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the profile name.",
+          "description": "Specify the profile name."
+        },
+        {
+          "name": "templateID",
+          "title": "Template ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the template ID.",
+          "description": "Specify the template ID."
+        },
+        {
+          "name": "worm_ipRange_exclude",
+          "title": "Worm IP Range to Exclude",
+          "type": "json",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "value": "[\n    {\n      \"start\": \"10.10.10.10\",\n      \"end\": \"10.10.10.20\"\n    }\n  ]",
+          "tooltip": "Specify the worm IP range to exclude.",
+          "description": "Specify the worm IP range to exclude."
+        },
+        {
+          "name": "scheduleLoop",
+          "title": "Schedule Loop",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the frequency for triggering the assessment eg: one-time.",
+          "description": "Specify the frequency for triggering the assessment eg: one-time."
+        },
+        {
+          "name": "integrationsSelected",
+          "title": "Integrations to Select",
+          "type": "json",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "value": "[\n    {\n      \"value\": \"MicrosoftAzureSentinel\",\n      \"executorId\": \"\"\n    }\n  ]",
+          "tooltip": "Specify the integrations to select.",
+          "description": "Specify the crown jewels (Important resources on which to create assessment)."
+        },
+        {
+          "name": "schedule",
+          "title": "Schedule",
+          "type": "datetime",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the time at which assessment should be triggered.",
+          "description": "Specify the time at which assessment should be triggered."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_latest_report_results",
+      "title": "Get Latest Report Results",
+      "annotation": "get_latest_report_results",
+      "description": "Retrieves the latest endpoint security report results from the cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "env",
+          "title": "Environment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the environment ID. If an ID is not provided, the request will return latest report results for the Default environment.",
+          "description": "Specify the environment ID. If an ID is not provided, the request will return latest report results for the Default environment."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_latest_technical_report_results",
+      "title": "Get Latest Technical Report Results",
+      "annotation": "get_latest_technical_report_results",
+      "description": "Retrieves the latest endpoint security technical report results from the cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "skip",
+          "title": "Offset",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the number of records to skip.",
+          "description": "Specify the number of records to skip."
+        },
+        {
+          "name": "limit",
+          "title": "Limit",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the limit of how many items to get - Default = 100.",
+          "description": "Specify the limit of how many items to get - Default = 100."
+        },
+        {
+          "name": "env",
+          "title": "Environment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the environment ID. If an ID is not provided, the request will return latest technical report results for the Default environment.",
+          "description": "Specify the environment ID. If an ID is not provided, the request will return latest technical report results for the Default environment."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_latest_siem_detection_results",
+      "title": "Get Latest SIEM Detection Results",
+      "annotation": "get_latest_siem_detection_results",
+      "description": "Retrieves the latest SIEM detection results from endpoint security assessments from cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "env",
+          "title": "Environment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the environment ID. If an ID is not provided, the request will return latest technical report results for the Default environment.",
+          "description": "Specify the environment ID. If an ID is not provided, the request will return latest technical report results for the Default environment."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_detection_results_by_id",
+      "title": "Get Detection Results By ID",
+      "annotation": "get_detection_results_by_id",
+      "description": "Retrieves the detection result data for a specific ID from cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "id",
+          "title": "ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the endpoint security payload ID whose details to retrieve from cymulate server.",
+          "description": "Specify the endpoint security payload ID whose details to retrieve from cymulate server."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_attack_navigator_results",
+      "title": "Get Attack Navigator Results",
+      "annotation": "get_attack_navigator_results",
+      "description": "Retrieves the latest (overview) Endpoint Security ATTACK navigator report results by environment ID from cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "env",
+          "title": "Environment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the environment ID. If an ID is not provided, the request will return latest report results for the Default environment.",
+          "description": "Specify the environment ID. If an ID is not provided, the request will return latest report results for the Default environment."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_attack_navigator_results_by_assessment_id",
+      "title": "Get Attack Navigator Results By Assessment ID",
+      "annotation": "get_attack_navigator_results_by_assessment_id",
+      "description": "Retrieves the Endpoint Security ATTACK navigator report results for a specific assessment from cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "id",
+          "title": "ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the assessment ID whose details to retrieve from cymulate server.",
+          "description": "Specify the assessment ID whose details to retrieve from cymulate server."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_assessment_history",
+      "title": "Get Assessment History",
+      "annotation": "get_assessment_history",
+      "description": "Retrieves the Endpoint Security assessment history within the date range provided. If a date range is not provided, the response will retrieve the history from the last 30 days from cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "fromDate",
+          "title": "From Date",
+          "type": "datetime",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the date from where to fetch assessments.",
+          "description": "Specify the date from where to fetch assessments."
+        },
+        {
+          "name": "toDate",
+          "title": "To Date",
+          "type": "datetime",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the date until which assessments should be fetched.",
+          "description": "Specify the date until which assessments should be fetched."
+        },
+        {
+          "name": "env",
+          "title": "Environment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the environment ID. If an ID is not provided, the request will return latest report results for the Default environment.",
+          "description": "Specify the environment ID. If an ID is not provided, the request will return latest report results for the Default environment."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_technical_report_results_by_assessment_id",
+      "title": "Get Technical Report Results By Assessment ID",
+      "annotation": "get_technical_report_results_by_assessment_id",
+      "description": "Retrieves the endpoint security technical report results for a specific assessment from the cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "id",
+          "title": "ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the assessment ID whose details to retrieve from cymulate server.",
+          "description": "Specify the assessment ID whose details to retrieve from cymulate server."
+        },
+        {
+          "name": "skip",
+          "title": "Offset",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the number of records to skip.",
+          "description": "Specify the number of records to skip."
+        },
+        {
+          "name": "limit",
+          "title": "Limit",
+          "type": "integer",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the limit of how many items to get - Default = all.",
+          "description": "Specify the limit of how many items to get - Default = all."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_executive_report_results_by_assessment_id",
+      "title": "Get Executive Report Results By Assessment ID",
+      "annotation": "get_executive_report_results_by_assessment_id",
+      "description": "Retrieves the Endpoint Security executive report results for a specific assessment from the cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "id",
+          "title": "ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the assessment ID whose details to retrieve from cymulate server.",
+          "description": "Specify the assessment ID whose details to retrieve from cymulate server."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_template_list",
+      "title": "Get Template List",
+      "annotation": "get_template_list",
+      "description": "Retrieve a list of available Endpoint Security templates from cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_template_by_id",
+      "title": "Get Template By ID",
+      "annotation": "get_template_by_id",
+      "description": "Retrieve a specific Endpoint Security template by its ID from cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "id",
+          "title": "ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": true,
+          "tooltip": "Specify the template ID whose details to retrieve from cymulate server.",
+          "description": "Specify the template ID whose details to retrieve from cymulate server."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "get_assessment_status",
+      "title": "Get Assessment Status",
+      "annotation": "get_assessment_status",
+      "description": "Retrieve an Endpoint Security assessment status by the assessment ID from cymulate server.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "id",
+          "title": "ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the assessment ID whose details to retrieve from cymulate server.",
+          "description": "Specify the assessment ID whose details to retrieve from cymulate server."
+        }
+      ],
+      "output_schema": {}
+    },
+    {
+      "operation": "stop_assessment",
+      "title": "Stop Assessment",
+      "annotation": "stop_assessment",
+      "description": "Stop an Endpoint Security assessment that is running in cymulate.",
+      "category": "investigation",
+      "visible": true,
+      "enabled": true,
+      "parameters": [
+        {
+          "name": "env",
+          "title": "Environment ID",
+          "type": "text",
+          "editable": true,
+          "visible": true,
+          "required": false,
+          "tooltip": "Specify the environment ID. If an ID is not provided, the most recently launched assessment will be stopped.",
+          "description": "Specify the environment ID. If an ID is not provided, the most recently launched assessment will be stopped."
+        }
+      ],
+      "output_schema": {}
+    }
+  ]
+}
