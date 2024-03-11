@@ -71,8 +71,8 @@
           "editable": true,
           "visible": true,
           "required": true,
-          "tooltip": "Specify the profile name.",
-          "description": "Specify the profile name."
+          "tooltip": "Specify the profile name. eg: NT AUTHORITY\\\\System (for service based agent)",
+          "description": "Specify the profile name. eg: NT AUTHORITY\\\\System (for service based agent)"
         },
         {
           "name": "templateID",
@@ -81,8 +81,8 @@
           "editable": true,
           "visible": true,
           "required": true,
-          "tooltip": "Specify the template ID.",
-          "description": "Specify the template ID."
+          "tooltip": "Specify the template ID. eg : 5c692...",
+          "description": "Specify the template ID. eg : 5c692..."
         },
         {
           "name": "worm_ipRange_exclude",
@@ -133,7 +133,7 @@
       "operation": "get_latest_report_results",
       "title": "Get Latest Report Results",
       "annotation": "get_latest_report_results",
-      "description": "Retrieves the latest endpoint security report results from the cymulate server.",
+      "description": "Retrieves the latest endpoint security report results from the Cymulate server.",
       "category": "investigation",
       "visible": true,
       "enabled": true,
@@ -155,7 +155,7 @@
       "operation": "get_latest_technical_report_results",
       "title": "Get Latest Technical Report Results",
       "annotation": "get_latest_technical_report_results",
-      "description": "Retrieves the latest endpoint security technical report results from the cymulate server.",
+      "description": "Retrieves the latest endpoint security technical report results from the Cymulate server.",
       "category": "investigation",
       "visible": true,
       "enabled": true,
