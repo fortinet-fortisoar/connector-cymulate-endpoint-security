@@ -38,26 +38,26 @@ For the procedure to configure a connector, click [here](https://docs.fortinet.c
 ## Actions supported by the connector
 The following automated operations can be included in playbooks and you can also use the annotations to access operations:
 <table border=1><thead><tr><th>Function</th><th>Description</th><th>Annotation and Category</th></tr></thead><tbody><tr><td>Create Assessment</td><td>Creates an Endpoint Security assessment based on the input parameters values provided.</td><td>create_assessment <br/>Investigation</td></tr>
-<tr><td>Get Latest Report Results</td><td>Retrieves the latest endpoint security report results from the cymulate server.</td><td>get_latest_report_results <br/>Investigation</td></tr>
-<tr><td>Get Latest Technical Report Results</td><td>Retrieves the latest endpoint security technical report results from the cymulate server.</td><td>get_latest_technical_report_results <br/>Investigation</td></tr>
-<tr><td>Get Latest SIEM Detection Results</td><td>Retrieves the latest SIEM detection results from endpoint security assessments from cymulate server.</td><td>get_latest_siem_detection_results <br/>Investigation</td></tr>
-<tr><td>Get Detection Results By ID</td><td>Retrieves the detection result data for a specific ID from cymulate server.</td><td>get_detection_results_by_id <br/>Investigation</td></tr>
-<tr><td>Get Attack Navigator Results</td><td>Retrieves the latest (overview) Endpoint Security ATTACK navigator report results by environment ID from cymulate server.</td><td>get_attack_navigator_results <br/>Investigation</td></tr>
-<tr><td>Get Attack Navigator Results By Assessment ID</td><td>Retrieves the Endpoint Security ATTACK navigator report results for a specific assessment from cymulate server.</td><td>get_attack_navigator_results_by_assessment_id <br/>Investigation</td></tr>
-<tr><td>Get Assessment History</td><td>Retrieves the Endpoint Security assessment history within the date range provided. If a date range is not provided, the response will retrieve the history from the last 30 days from cymulate server.</td><td>get_assessment_history <br/>Investigation</td></tr>
-<tr><td>Get Technical Report Results By Assessment ID</td><td>Retrieves the endpoint security technical report results for a specific assessment from the cymulate server.</td><td>get_technical_report_results_by_assessment_id <br/>Investigation</td></tr>
-<tr><td>Get Executive Report Results By Assessment ID</td><td>Retrieves the Endpoint Security executive report results for a specific assessment from the cymulate server.</td><td>get_executive_report_results_by_assessment_id <br/>Investigation</td></tr>
-<tr><td>Get Template List</td><td>Retrieve a list of available Endpoint Security templates from cymulate server.</td><td>get_template_list <br/>Investigation</td></tr>
-<tr><td>Get Template By ID</td><td>Retrieve a specific Endpoint Security template by its ID from cymulate server.</td><td>get_template_by_id <br/>Investigation</td></tr>
-<tr><td>Get Assessment Status</td><td>Retrieve an Endpoint Security assessment status by the assessment ID from cymulate server.</td><td>get_assessment_status <br/>Investigation</td></tr>
-<tr><td>Stop Assessment</td><td>Stop an Endpoint Security assessment that is running in cymulate.</td><td>stop_assessment <br/>Investigation</td></tr>
+<tr><td>Get Latest Report Results</td><td>Retrieves the latest endpoint security report results from the Cymulate server.</td><td>get_latest_report_results <br/>Investigation</td></tr>
+<tr><td>Get Latest Technical Report Results</td><td>Retrieves the latest endpoint security technical report results from the Cymulate server.</td><td>get_latest_technical_report_results <br/>Investigation</td></tr>
+<tr><td>Get Latest SIEM Detection Results</td><td>Retrieves the latest SIEM detection results from endpoint security assessments from Cymulate server.</td><td>get_latest_siem_detection_results <br/>Investigation</td></tr>
+<tr><td>Get Detection Results By Payload ID</td><td>Retrieves the detection result data for a specific payload ID from Cymulate server.</td><td>get_detection_results_by_payload_id <br/>Investigation</td></tr>
+<tr><td>Get Attack Navigator Results</td><td>Retrieves the latest (overview) Endpoint Security ATTACK navigator report results by environment ID from Cymulate server.</td><td>get_attack_navigator_results <br/>Investigation</td></tr>
+<tr><td>Get Attack Navigator Results By Assessment ID</td><td>Retrieves the Endpoint Security ATTACK navigator report results for a specific assessment from Cymulate server.</td><td>get_attack_navigator_results_by_assessment_id <br/>Investigation</td></tr>
+<tr><td>Get Assessment History</td><td>Retrieves the Endpoint Security assessment history within the date range provided. If a date range is not provided, the response will retrieve the history from the last 30 days from Cymulate server.</td><td>get_assessment_history <br/>Investigation</td></tr>
+<tr><td>Get Technical Report Results By Assessment ID</td><td>Retrieves the endpoint security technical report results for a specific assessment from the Cymulate server.</td><td>get_technical_report_results_by_assessment_id <br/>Investigation</td></tr>
+<tr><td>Get Executive Report Results By Assessment ID</td><td>Retrieves the Endpoint Security executive report results for a specific assessment from the Cymulate server.</td><td>get_executive_report_results_by_assessment_id <br/>Investigation</td></tr>
+<tr><td>Get Template List</td><td>Retrieve a list of available Endpoint Security templates from Cymulate server.</td><td>get_template_list <br/>Investigation</td></tr>
+<tr><td>Get Template By ID</td><td>Retrieve a specific Endpoint Security template by its ID from Cymulate server.</td><td>get_template_by_id <br/>Investigation</td></tr>
+<tr><td>Get Assessment Status</td><td>Retrieve an Endpoint Security assessment status by the assessment ID from Cymulate server.</td><td>get_assessment_status <br/>Investigation</td></tr>
+<tr><td>Stop Assessment</td><td>Stop an Endpoint Security assessment that is running in Cymulate.</td><td>stop_assessment <br/>Investigation</td></tr>
 </tbody></table>
 
 ### operation: Create Assessment
 #### Input parameters
 <table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Agent Name</td><td>Specify the agent name (Computer Name).
-</td></tr><tr><td>Agent Profile Name</td><td>Specify the profile name.
-</td></tr><tr><td>Template ID</td><td>Specify the template ID.
+</td></tr><tr><td>Agent Profile Name</td><td>Specify the profile name. eg: NT AUTHORITY\\System (for service based agent)
+</td></tr><tr><td>Template ID</td><td>Specify the template ID. eg : 5c692...
 </td></tr><tr><td>Worm IP Range to Exclude</td><td>Specify the worm IP range to exclude.
 </td></tr><tr><td>Schedule Loop</td><td>Specify the frequency for triggering the assessment eg: one-time.
 </td></tr><tr><td>Integrations to Select</td><td>Specify the crown jewels (Important resources on which to create assessment).
@@ -93,9 +93,9 @@ The following automated operations can be included in playbooks and you can also
 #### Output
 
  The output contains a non-dictionary value.
-### operation: Get Detection Results By ID
+### operation: Get Detection Results By Payload ID
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>ID</td><td>Specify the endpoint security payload ID whose details to retrieve from cymulate server.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Payload ID</td><td>Specify the endpoint security payload ID whose details to retrieve from Cymulate server.
 </td></tr></tbody></table>
 
 #### Output
@@ -111,7 +111,7 @@ The following automated operations can be included in playbooks and you can also
  The output contains a non-dictionary value.
 ### operation: Get Attack Navigator Results By Assessment ID
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>ID</td><td>Specify the assessment ID whose details to retrieve from cymulate server.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Assessment ID</td><td>Specify the assessment ID whose details to retrieve from Cymulate server.
 </td></tr></tbody></table>
 
 #### Output
@@ -129,7 +129,7 @@ The following automated operations can be included in playbooks and you can also
  The output contains a non-dictionary value.
 ### operation: Get Technical Report Results By Assessment ID
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>ID</td><td>Specify the assessment ID whose details to retrieve from cymulate server.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Assessment ID</td><td>Specify the assessment ID whose details to retrieve from Cymulate server.
 </td></tr><tr><td>Offset</td><td>(Optional) Specify the number of records to skip.
 </td></tr><tr><td>Limit</td><td>(Optional) Specify the limit of how many items to get - Default = all.
 </td></tr></tbody></table>
@@ -139,7 +139,7 @@ The following automated operations can be included in playbooks and you can also
  The output contains a non-dictionary value.
 ### operation: Get Executive Report Results By Assessment ID
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>ID</td><td>Specify the assessment ID whose details to retrieve from cymulate server.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Assessment ID</td><td>Specify the assessment ID whose details to retrieve from Cymulate server.
 </td></tr></tbody></table>
 
 #### Output
@@ -153,7 +153,7 @@ None.
  The output contains a non-dictionary value.
 ### operation: Get Template By ID
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>ID</td><td>Specify the template ID whose details to retrieve from cymulate server.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Template ID</td><td>Specify the template ID whose details to retrieve from Cymulate server.
 </td></tr></tbody></table>
 
 #### Output
@@ -161,7 +161,7 @@ None.
  The output contains a non-dictionary value.
 ### operation: Get Assessment Status
 #### Input parameters
-<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>ID</td><td>(Optional) Specify the assessment ID whose details to retrieve from cymulate server.
+<table border=1><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td>Assessment ID</td><td>(Optional) Specify the assessment ID whose details to retrieve from Cymulate server.
 </td></tr></tbody></table>
 
 #### Output
@@ -183,7 +183,7 @@ The `Sample - cymulate-endpoint-security - 1.0.0` playbook collection comes bund
 - Get Assessment Status
 - Get Attack Navigator Results
 - Get Attack Navigator Results By Assessment ID
-- Get Detection Results By ID
+- Get Detection Results By Payload ID
 - Get Executive Report Results By Assessment ID
 - Get Latest Report Results
 - Get Latest SIEM Detection Results

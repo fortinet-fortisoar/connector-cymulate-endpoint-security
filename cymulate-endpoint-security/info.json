@@ -216,17 +216,17 @@
       "output_schema": {}
     },
     {
-      "operation": "get_detection_results_by_id",
-      "title": "Get Detection Results By ID",
-      "annotation": "get_detection_results_by_id",
-      "description": "Retrieves the detection result data for a specific ID from Cymulate server.",
+      "operation": "get_detection_results_by_payload_id",
+      "title": "Get Detection Results By Payload ID",
+      "annotation": "get_detection_results_by_payload_id",
+      "description": "Retrieves the detection result data for a specific payload ID from Cymulate server.",
       "category": "investigation",
       "visible": true,
       "enabled": true,
       "parameters": [
         {
           "name": "id",
-          "title": "ID",
+          "title": "Payload ID",
           "type": "text",
           "editable": true,
           "visible": true,
@@ -270,7 +270,7 @@
       "parameters": [
         {
           "name": "id",
-          "title": "ID",
+          "title": "Assessment ID",
           "type": "text",
           "editable": true,
           "visible": true,
@@ -334,7 +334,7 @@
       "parameters": [
         {
           "name": "id",
-          "title": "ID",
+          "title": "Assessment ID",
           "type": "text",
           "editable": true,
           "visible": true,
@@ -376,7 +376,7 @@
       "parameters": [
         {
           "name": "id",
-          "title": "ID",
+          "title": "Assessment ID",
           "type": "text",
           "editable": true,
           "visible": true,
@@ -409,7 +409,7 @@
       "parameters": [
         {
           "name": "id",
-          "title": "ID",
+          "title": "Template ID",
           "type": "text",
           "editable": true,
           "visible": true,
@@ -431,7 +431,7 @@
       "parameters": [
         {
           "name": "id",
-          "title": "ID",
+          "title": "Assessment ID",
           "type": "text",
           "editable": true,
           "visible": true,

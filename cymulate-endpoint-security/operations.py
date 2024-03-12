@@ -90,7 +90,7 @@ def get_latest_siem_detection_results(config, params):
     return make_api_call(endpoint=endpoint, config=config, params=params)
 
 
-def get_detection_results_by_id(config, params):
+def get_detection_results_by_payload_id(config, params):
     endpoint = f"/edr/history/technical/detection/{params.get('id')}"
     return make_api_call(endpoint=endpoint, config=config)
 
@@ -164,7 +164,7 @@ operations = {
     'get_latest_report_results': get_latest_report_results,
     'get_latest_technical_report_results': get_latest_technical_report_results,
     'get_latest_siem_detection_results': get_latest_siem_detection_results,
-    'get_detection_results_by_id': get_detection_results_by_id,
+    'get_detection_results_by_payload_id': get_detection_results_by_payload_id,
     'get_attack_navigator_results': get_attack_navigator_results,
     'get_attack_navigator_results_by_assessment_id': get_attack_navigator_results_by_assessment_id,
     'get_assessment_history': get_assessment_history,

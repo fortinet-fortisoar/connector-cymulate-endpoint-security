@@ -2,10 +2,10 @@
   "type": "workflow_collections",
   "data": [
     {
-      "uuid": "2b143b4f-82d0-4219-a0eb-72de4c825b52",
+      "uuid": "60f01649-f5b1-4699-a9be-77447d3dba24",
       "@type": "WorkflowCollection",
       "name": "Sample - Cymulate Endpoint Security - BAS - 1.0.0",
-      "description": "The Cymulate Exposure Management and Security Validation Platform provides the technology for exposure\ndiscovery, validation, and prioritization with business insights and intelligence. This simplifies security leaders\u2019 risk\nand resilience to emergent threats and a rapidly changing attack surface. With a complete view of the security\nposture and business risks, the Cymulate platform gives security leaders the data they need to define the scope for cyber initiatives, successfully mobilize mitigations, and continuously assess security operations performance. ",
+      "description": "The Cymulate Exposure Management and Security Validation Platform provides the technology for exposure\ndiscovery, validation, and prioritization with business insights and intelligence. This simplifies security leaders\u2019 risk\nand resilience to emergent threats and a rapidly changing attack surface. With a complete view of the security\nposture and business risks, the Cymulate platform gives security leaders the data they need to define the scope for cyber initiatives, successfully mobilize mitigations, and continuously assess security operations performance.",
       "visible": true,
       "image": null,
       "recordTags": [
@@ -15,8 +15,8 @@
       "workflows": [
         {
           "@type": "Workflow",
-          "uuid": "49eb3bbf-98c2-4c8c-9ded-3a0be4dd9c93",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "c701c98f-69fe-48e4-a0ea-f9098cfded78",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
           "description": "Creates an Endpoint Security assessment based on the input parameters values provided.",
           "name": "Create Assessment",
@@ -30,16 +30,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/83eb8317-4876-49fd-87a3-b3e3ee89d03e",
+          "triggerStep": "/api/3/workflow_steps/6ddf85b6-b5c3-45bd-ba3a-aa951758fece",
           "steps": [
             {
-              "uuid": "83eb8317-4876-49fd-87a3-b3e3ee89d03e",
+              "uuid": "6ddf85b6-b5c3-45bd-ba3a-aa951758fece",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "e1705dc1-6209-404d-afe6-104358c0127c",
+                "route": "777ce6ea-0fd3-4eeb-8130-f8d0258ed985",
                 "title": "Cymulate Endpoint Security - BAS: Create Assessment",
                 "resources": [
                   "alerts"
@@ -59,7 +59,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "df06c463-a5ae-484a-8515-a77294716cc6",
+              "uuid": "65d9079d-25e5-451f-a1da-f371b96d0b4d",
               "@type": "WorkflowStep",
               "name": "Create Assessment",
               "description": null,
@@ -84,21 +84,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "84ebd074-f27a-44fe-a80a-42367c39ffd9",
+              "uuid": "dae7df5a-b136-414f-b8eb-540fb3e9d3e2",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Create Assessment",
-              "sourceStep": "/api/3/workflow_steps/83eb8317-4876-49fd-87a3-b3e3ee89d03e",
-              "targetStep": "/api/3/workflow_steps/df06c463-a5ae-484a-8515-a77294716cc6"
+              "sourceStep": "/api/3/workflow_steps/6ddf85b6-b5c3-45bd-ba3a-aa951758fece",
+              "targetStep": "/api/3/workflow_steps/65d9079d-25e5-451f-a1da-f371b96d0b4d"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "13e56a4b-4965-49c9-a00b-c8f08ffdc632",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "a062b137-86ec-40c4-831a-31d330be16bd",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieves the latest endpoint security report results from the cymulate server.",
+          "description": "Retrieves the latest endpoint security report results from the Cymulate server.",
           "name": "Get Latest Report Results",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -110,16 +110,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/551c14e7-6e0a-4d82-8e95-2dd359f8da1c",
+          "triggerStep": "/api/3/workflow_steps/057021c5-a144-4a49-831f-8156d668c1d7",
           "steps": [
             {
-              "uuid": "551c14e7-6e0a-4d82-8e95-2dd359f8da1c",
+              "uuid": "057021c5-a144-4a49-831f-8156d668c1d7",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "dca6140a-4dee-4ce5-8703-7fea5875c347",
+                "route": "cd78b745-e8aa-4a72-9598-2041a6d3458a",
                 "title": "Cymulate Endpoint Security - BAS: Get Latest Report Results",
                 "resources": [
                   "alerts"
@@ -139,7 +139,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "bd3dedcd-2084-416c-b4af-b70e786a5fca",
+              "uuid": "b2c2da19-163b-4f48-85f9-c40fbb25a672",
               "@type": "WorkflowStep",
               "name": "Get Latest Report Results",
               "description": null,
@@ -161,21 +161,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "3f898f71-a8b0-4eb0-8547-488c14ed86cd",
+              "uuid": "17997b49-d63d-4688-9e27-9fb36d361c4f",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Latest Report Results",
-              "sourceStep": "/api/3/workflow_steps/551c14e7-6e0a-4d82-8e95-2dd359f8da1c",
-              "targetStep": "/api/3/workflow_steps/bd3dedcd-2084-416c-b4af-b70e786a5fca"
+              "sourceStep": "/api/3/workflow_steps/057021c5-a144-4a49-831f-8156d668c1d7",
+              "targetStep": "/api/3/workflow_steps/b2c2da19-163b-4f48-85f9-c40fbb25a672"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "4bf8ec00-c015-432d-b369-646f2d213080",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "b90b60ee-706b-435e-b4bb-d8e73e991ed6",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieves the latest endpoint security technical report results from the cymulate server.",
+          "description": "Retrieves the latest endpoint security technical report results from the Cymulate server.",
           "name": "Get Latest Technical Report Results",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -187,16 +187,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/91366e3e-e913-4b1c-b670-27cb15a2f237",
+          "triggerStep": "/api/3/workflow_steps/339493be-37cb-4de1-aaf2-ec9b2a95d2be",
           "steps": [
             {
-              "uuid": "91366e3e-e913-4b1c-b670-27cb15a2f237",
+              "uuid": "339493be-37cb-4de1-aaf2-ec9b2a95d2be",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "b03ce8a9-342e-41b4-b434-98941598f44b",
+                "route": "f366ee05-e656-403d-b93b-c6eb0edbe6f4",
                 "title": "Cymulate Endpoint Security - BAS: Get Latest Technical Report Results",
                 "resources": [
                   "alerts"
@@ -216,7 +216,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "61078aa1-c8d4-46a7-bdc4-353374839313",
+              "uuid": "4f17e676-65e6-457b-96db-fef87b933caf",
               "@type": "WorkflowStep",
               "name": "Get Latest Technical Report Results",
               "description": null,
@@ -238,21 +238,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "3a2b01f4-ddfd-4a61-b5bc-a88802753cdd",
+              "uuid": "fd053e4b-377c-42b8-bf25-92f12e419ad9",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Latest Technical Report Results",
-              "sourceStep": "/api/3/workflow_steps/91366e3e-e913-4b1c-b670-27cb15a2f237",
-              "targetStep": "/api/3/workflow_steps/61078aa1-c8d4-46a7-bdc4-353374839313"
+              "sourceStep": "/api/3/workflow_steps/339493be-37cb-4de1-aaf2-ec9b2a95d2be",
+              "targetStep": "/api/3/workflow_steps/4f17e676-65e6-457b-96db-fef87b933caf"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "55a4c1d3-d46b-43b8-9210-178687e5f5da",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "e21113d8-109c-4396-b424-e6a5177dcf2e",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieves the latest SIEM detection results from endpoint security assessments from cymulate server.",
+          "description": "Retrieves the latest SIEM detection results from endpoint security assessments from Cymulate server.",
           "name": "Get Latest SIEM Detection Results",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -264,16 +264,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/80cb13a8-3063-4e04-a889-3662e3fd5068",
+          "triggerStep": "/api/3/workflow_steps/09bb49c5-2f0a-4c15-8fe5-c52360a468fe",
           "steps": [
             {
-              "uuid": "80cb13a8-3063-4e04-a889-3662e3fd5068",
+              "uuid": "09bb49c5-2f0a-4c15-8fe5-c52360a468fe",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "8991cc3a-c903-4535-b374-c8e75e2b3c90",
+                "route": "349cad95-adfd-443d-85e1-f8bd912e376a",
                 "title": "Cymulate Endpoint Security - BAS: Get Latest SIEM Detection Results",
                 "resources": [
                   "alerts"
@@ -293,7 +293,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "29bd13dd-82d5-4a9b-8d24-5707601f76a5",
+              "uuid": "bd6a6f05-4989-46d1-97f3-bd9f88e0c314",
               "@type": "WorkflowStep",
               "name": "Get Latest SIEM Detection Results",
               "description": null,
@@ -315,22 +315,22 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "f3d52805-85df-45be-85ff-2d0a0bbf0ab2",
+              "uuid": "705cab3a-00b7-4937-bb25-c216833b7d3c",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Latest SIEM Detection Results",
-              "sourceStep": "/api/3/workflow_steps/80cb13a8-3063-4e04-a889-3662e3fd5068",
-              "targetStep": "/api/3/workflow_steps/29bd13dd-82d5-4a9b-8d24-5707601f76a5"
+              "sourceStep": "/api/3/workflow_steps/09bb49c5-2f0a-4c15-8fe5-c52360a468fe",
+              "targetStep": "/api/3/workflow_steps/bd6a6f05-4989-46d1-97f3-bd9f88e0c314"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "925251b5-dd98-4e03-bffb-8340135aebad",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "39360061-70b7-415a-9cb6-8cc2174d4f47",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieves the detection result data for a specific ID from cymulate server.",
-          "name": "Get Detection Results By ID",
+          "description": "Retrieves the detection result data for a specific payload ID from Cymulate server.",
+          "name": "Get Detection Results By Payload ID",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
             "Cymulate",
@@ -341,17 +341,17 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/bd5a3cc5-0f8c-425f-a158-77e5845c1143",
+          "triggerStep": "/api/3/workflow_steps/4d94521f-8c0d-44cc-b4fe-1580c8215884",
           "steps": [
             {
-              "uuid": "bd5a3cc5-0f8c-425f-a158-77e5845c1143",
+              "uuid": "4d94521f-8c0d-44cc-b4fe-1580c8215884",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "8a3278c4-10c9-4d51-9d73-c218e5da4bd0",
-                "title": "Cymulate Endpoint Security - BAS: Get Detection Results By ID",
+                "route": "b24ada29-f0d5-432c-93e2-9073bd393d5a",
+                "title": "Cymulate Endpoint Security - BAS: Get Detection Results By Payload ID",
                 "resources": [
                   "alerts"
                 ],
@@ -370,9 +370,9 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "e3006d19-f440-4aa9-803d-da5775506c2b",
+              "uuid": "bb41234e-f90b-4fc2-8ce4-9d4a23b3b393",
               "@type": "WorkflowStep",
-              "name": "Get Detection Results By ID",
+              "name": "Get Detection Results By Payload ID",
               "description": null,
               "status": null,
               "arguments": {
@@ -381,8 +381,8 @@
                 "params": [],
                 "version": "1.0.0",
                 "connector": "cymulate-endpoint-security",
-                "operation": "get_detection_results_by_id",
-                "operationTitle": "Get Detection Results By ID"
+                "operation": "get_detection_results_by_payload_id",
+                "operationTitle": "Get Detection Results By Payload ID"
               },
               "left": "188",
               "top": "120",
@@ -392,21 +392,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "96bb8bdc-0530-46f1-a09b-4e887e063df1",
+              "uuid": "a2f6b5f4-0739-407f-aabe-c27da7df3b04",
               "label": null,
               "isExecuted": false,
-              "name": "Start-> Get Detection Results By ID",
-              "sourceStep": "/api/3/workflow_steps/bd5a3cc5-0f8c-425f-a158-77e5845c1143",
-              "targetStep": "/api/3/workflow_steps/e3006d19-f440-4aa9-803d-da5775506c2b"
+              "name": "Start-> Get Detection Results By Payload ID",
+              "sourceStep": "/api/3/workflow_steps/4d94521f-8c0d-44cc-b4fe-1580c8215884",
+              "targetStep": "/api/3/workflow_steps/bb41234e-f90b-4fc2-8ce4-9d4a23b3b393"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "84b152a5-1863-4540-8b97-ced28e1d3a42",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "b5f3733b-818a-4ba0-8ade-531b55dad924",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieves the latest (overview) Endpoint Security ATTACK navigator report results by environment ID from cymulate server.",
+          "description": "Retrieves the latest (overview) Endpoint Security ATTACK navigator report results by environment ID from Cymulate server.",
           "name": "Get Attack Navigator Results",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -418,16 +418,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/f17bf022-7762-4bc8-97fc-da36dd76969a",
+          "triggerStep": "/api/3/workflow_steps/a538f708-199d-4229-bf5e-348d60fe2c73",
           "steps": [
             {
-              "uuid": "f17bf022-7762-4bc8-97fc-da36dd76969a",
+              "uuid": "a538f708-199d-4229-bf5e-348d60fe2c73",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "858f1ca0-0c47-4e49-bc8e-ce26b2b94f43",
+                "route": "abe2b9de-ec88-4690-adb9-ceef3abb27f2",
                 "title": "Cymulate Endpoint Security - BAS: Get Attack Navigator Results",
                 "resources": [
                   "alerts"
@@ -447,7 +447,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "5e463fa2-27af-4ef7-843f-6e20b8ec8940",
+              "uuid": "e8a2fa94-ddf6-4c16-8a3e-5b8f41a0f5f6",
               "@type": "WorkflowStep",
               "name": "Get Attack Navigator Results",
               "description": null,
@@ -469,21 +469,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "bcb85eae-9c3b-490e-b8f8-de13414e8988",
+              "uuid": "f5c2257a-cc2b-4320-a164-a3ed3a57ea57",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Attack Navigator Results",
-              "sourceStep": "/api/3/workflow_steps/f17bf022-7762-4bc8-97fc-da36dd76969a",
-              "targetStep": "/api/3/workflow_steps/5e463fa2-27af-4ef7-843f-6e20b8ec8940"
+              "sourceStep": "/api/3/workflow_steps/a538f708-199d-4229-bf5e-348d60fe2c73",
+              "targetStep": "/api/3/workflow_steps/e8a2fa94-ddf6-4c16-8a3e-5b8f41a0f5f6"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "1ff435cc-6c7b-4ed7-bce8-c84a71b74ded",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "1d324834-a056-45d1-a84b-3cff6660e3ed",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieves the Endpoint Security ATTACK navigator report results for a specific assessment from cymulate server.",
+          "description": "Retrieves the Endpoint Security ATTACK navigator report results for a specific assessment from Cymulate server.",
           "name": "Get Attack Navigator Results By Assessment ID",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -495,16 +495,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/19237e13-ece2-4a7b-8cc8-8097a227117f",
+          "triggerStep": "/api/3/workflow_steps/9d3a7e71-1d2f-4671-b283-2c5f19d5c6db",
           "steps": [
             {
-              "uuid": "19237e13-ece2-4a7b-8cc8-8097a227117f",
+              "uuid": "9d3a7e71-1d2f-4671-b283-2c5f19d5c6db",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "a0d8f045-0091-4440-9187-8d20c82ffb31",
+                "route": "307661d3-76cd-46c1-829e-e6f44ab12c91",
                 "title": "Cymulate Endpoint Security - BAS: Get Attack Navigator Results By Assessment ID",
                 "resources": [
                   "alerts"
@@ -524,7 +524,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "4e7c0b7e-32b1-46bb-82cd-72b31461cf82",
+              "uuid": "b43cfd4e-da34-4b5c-bab5-946fef596f92",
               "@type": "WorkflowStep",
               "name": "Get Attack Navigator Results By Assessment ID",
               "description": null,
@@ -546,21 +546,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "582394f2-62c8-4f05-8f24-1e7d92747afe",
+              "uuid": "a6c8a91a-e2e9-4de0-9d89-8f1d925795ba",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Attack Navigator Results By Assessment ID",
-              "sourceStep": "/api/3/workflow_steps/19237e13-ece2-4a7b-8cc8-8097a227117f",
-              "targetStep": "/api/3/workflow_steps/4e7c0b7e-32b1-46bb-82cd-72b31461cf82"
+              "sourceStep": "/api/3/workflow_steps/9d3a7e71-1d2f-4671-b283-2c5f19d5c6db",
+              "targetStep": "/api/3/workflow_steps/b43cfd4e-da34-4b5c-bab5-946fef596f92"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "2833dc8f-6da7-4d21-b850-a29ba3b1283e",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "7a55801a-3615-4800-89c9-76ab81728348",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieves the Endpoint Security assessment history within the date range provided. If a date range is not provided, the response will retrieve the history from the last 30 days from cymulate server.",
+          "description": "Retrieves the Endpoint Security assessment history within the date range provided. If a date range is not provided, the response will retrieve the history from the last 30 days from Cymulate server.",
           "name": "Get Assessment History",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -572,16 +572,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/6dba62b8-9c79-46af-9934-f0aab68a569e",
+          "triggerStep": "/api/3/workflow_steps/157d2778-9ada-432d-b66a-dd8649682550",
           "steps": [
             {
-              "uuid": "6dba62b8-9c79-46af-9934-f0aab68a569e",
+              "uuid": "157d2778-9ada-432d-b66a-dd8649682550",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "b062c3f9-cad9-4d5b-949c-3c00b6338420",
+                "route": "c94daed5-c9b6-4f36-9847-6b5001c99ee1",
                 "title": "Cymulate Endpoint Security - BAS: Get Assessment History",
                 "resources": [
                   "alerts"
@@ -601,7 +601,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "d86d0e7b-8e43-46c4-9cf6-f57edbb3dd6c",
+              "uuid": "03f89dd0-66ef-431a-8736-2584eab838fb",
               "@type": "WorkflowStep",
               "name": "Get Assessment History",
               "description": null,
@@ -623,21 +623,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "9c4a645e-f327-4293-a4ad-4be400a8483d",
+              "uuid": "f8c09c6b-81dd-4c86-8715-79d89787b5cc",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Assessment History",
-              "sourceStep": "/api/3/workflow_steps/6dba62b8-9c79-46af-9934-f0aab68a569e",
-              "targetStep": "/api/3/workflow_steps/d86d0e7b-8e43-46c4-9cf6-f57edbb3dd6c"
+              "sourceStep": "/api/3/workflow_steps/157d2778-9ada-432d-b66a-dd8649682550",
+              "targetStep": "/api/3/workflow_steps/03f89dd0-66ef-431a-8736-2584eab838fb"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "f4a8e250-4128-4514-961c-7809e87fd522",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "fd2142d3-a597-4cf2-ac48-83b49c99a26f",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieves the endpoint security technical report results for a specific assessment from the cymulate server.",
+          "description": "Retrieves the endpoint security technical report results for a specific assessment from the Cymulate server.",
           "name": "Get Technical Report Results By Assessment ID",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -649,16 +649,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/6fc81cac-00ee-4c80-a05c-1cf46d4004ec",
+          "triggerStep": "/api/3/workflow_steps/55898fbf-645e-469f-b98f-a1109814cd42",
           "steps": [
             {
-              "uuid": "6fc81cac-00ee-4c80-a05c-1cf46d4004ec",
+              "uuid": "55898fbf-645e-469f-b98f-a1109814cd42",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "df780cc0-e5f4-4a07-b1b5-5ce030a6486b",
+                "route": "9df021fe-b46b-4645-9183-ea1d1fc82239",
                 "title": "Cymulate Endpoint Security - BAS: Get Technical Report Results By Assessment ID",
                 "resources": [
                   "alerts"
@@ -678,7 +678,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "44b5ac6f-4432-459f-aa2d-c6f9a2d7f39a",
+              "uuid": "250711f4-424f-45a9-8669-2f8921e6a29a",
               "@type": "WorkflowStep",
               "name": "Get Technical Report Results By Assessment ID",
               "description": null,
@@ -700,21 +700,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "857f60d9-7b07-4a94-a5f9-1449cd2f3464",
+              "uuid": "b146b74e-fafd-4b4a-b4f7-f39cbe84a134",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Technical Report Results By Assessment ID",
-              "sourceStep": "/api/3/workflow_steps/6fc81cac-00ee-4c80-a05c-1cf46d4004ec",
-              "targetStep": "/api/3/workflow_steps/44b5ac6f-4432-459f-aa2d-c6f9a2d7f39a"
+              "sourceStep": "/api/3/workflow_steps/55898fbf-645e-469f-b98f-a1109814cd42",
+              "targetStep": "/api/3/workflow_steps/250711f4-424f-45a9-8669-2f8921e6a29a"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "e7fecdb1-f13f-4142-8ce8-41b3780cfe5f",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "0e568e1c-d620-4877-9a27-1f809259398a",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieves the Endpoint Security executive report results for a specific assessment from the cymulate server.",
+          "description": "Retrieves the Endpoint Security executive report results for a specific assessment from the Cymulate server.",
           "name": "Get Executive Report Results By Assessment ID",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -726,16 +726,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/692a3cdf-7d9d-40bb-90c7-f3407a72e339",
+          "triggerStep": "/api/3/workflow_steps/8e0009ce-0bef-494e-98d1-1ce68a49e1b0",
           "steps": [
             {
-              "uuid": "692a3cdf-7d9d-40bb-90c7-f3407a72e339",
+              "uuid": "8e0009ce-0bef-494e-98d1-1ce68a49e1b0",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "ac452a5d-7e77-4ea3-af68-1b73daeed229",
+                "route": "70f93851-626d-428b-bf9f-69f67fe9305d",
                 "title": "Cymulate Endpoint Security - BAS: Get Executive Report Results By Assessment ID",
                 "resources": [
                   "alerts"
@@ -755,7 +755,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "2afb302c-1c79-4e75-9ce0-5c172c8e177c",
+              "uuid": "dfe32a80-7619-4426-af0f-41dacbe77bab",
               "@type": "WorkflowStep",
               "name": "Get Executive Report Results By Assessment ID",
               "description": null,
@@ -777,21 +777,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "142ef1bf-55cf-4526-8b05-ded1b9c6836c",
+              "uuid": "b1770ec9-2cb8-42ad-b14b-11b728743685",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Executive Report Results By Assessment ID",
-              "sourceStep": "/api/3/workflow_steps/692a3cdf-7d9d-40bb-90c7-f3407a72e339",
-              "targetStep": "/api/3/workflow_steps/2afb302c-1c79-4e75-9ce0-5c172c8e177c"
+              "sourceStep": "/api/3/workflow_steps/8e0009ce-0bef-494e-98d1-1ce68a49e1b0",
+              "targetStep": "/api/3/workflow_steps/dfe32a80-7619-4426-af0f-41dacbe77bab"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "264c66a9-c290-43b3-9f63-b9ba166f2265",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "6afefaa6-a562-43a3-8df8-83c3a3d7fc7a",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieve a list of available Endpoint Security templates from cymulate server.",
+          "description": "Retrieve a list of available Endpoint Security templates from Cymulate server.",
           "name": "Get Template List",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -803,16 +803,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/ead447ec-c2a2-47f7-97a4-3bc3da421a9b",
+          "triggerStep": "/api/3/workflow_steps/0d28f12c-9c42-42d5-85b9-86370772aeba",
           "steps": [
             {
-              "uuid": "ead447ec-c2a2-47f7-97a4-3bc3da421a9b",
+              "uuid": "0d28f12c-9c42-42d5-85b9-86370772aeba",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "728fc79f-f711-4424-b427-1084f704e620",
+                "route": "c63e451a-764e-45e8-a1d3-ecf11f78d3da",
                 "title": "Cymulate Endpoint Security - BAS: Get Template List",
                 "resources": [
                   "alerts"
@@ -832,7 +832,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "f0b70f04-430b-4b2d-b2c1-9280722064d5",
+              "uuid": "3e8e04e4-50c4-40cb-a6f4-11d952007ba2",
               "@type": "WorkflowStep",
               "name": "Get Template List",
               "description": null,
@@ -854,21 +854,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "5e92849c-cc26-4e1f-aaf5-08550b0b96c2",
+              "uuid": "effbe126-77d8-4e85-bdb9-44d144c577f4",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Template List",
-              "sourceStep": "/api/3/workflow_steps/ead447ec-c2a2-47f7-97a4-3bc3da421a9b",
-              "targetStep": "/api/3/workflow_steps/f0b70f04-430b-4b2d-b2c1-9280722064d5"
+              "sourceStep": "/api/3/workflow_steps/0d28f12c-9c42-42d5-85b9-86370772aeba",
+              "targetStep": "/api/3/workflow_steps/3e8e04e4-50c4-40cb-a6f4-11d952007ba2"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "2a38c254-9adb-4f3d-9256-b46e71a3ea8f",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "3fbd8acd-5760-41e9-b711-08a80505d6f7",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieve a specific Endpoint Security template by its ID from cymulate server.",
+          "description": "Retrieve a specific Endpoint Security template by its ID from Cymulate server.",
           "name": "Get Template By ID",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -880,16 +880,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/bf4bb55f-9969-4bfc-ab03-b2c251425f43",
+          "triggerStep": "/api/3/workflow_steps/6d2e3dff-94b5-41f4-a1fa-d85e2c0aa118",
           "steps": [
             {
-              "uuid": "bf4bb55f-9969-4bfc-ab03-b2c251425f43",
+              "uuid": "6d2e3dff-94b5-41f4-a1fa-d85e2c0aa118",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "4a48ac1b-d5f3-4169-a531-0f177b343143",
+                "route": "adf58c12-54c9-4772-b4e7-a5328721c73d",
                 "title": "Cymulate Endpoint Security - BAS: Get Template By ID",
                 "resources": [
                   "alerts"
@@ -909,7 +909,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "e9d3c84b-e169-462e-8aa8-a64a35004429",
+              "uuid": "410add49-b28b-434d-84dd-c42fe781b6ec",
               "@type": "WorkflowStep",
               "name": "Get Template By ID",
               "description": null,
@@ -931,21 +931,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "78dbf1b3-6206-4c2a-8200-a4b2fa624f1f",
+              "uuid": "c47f5a25-4089-4c45-ab95-8436a80a5ac6",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Template By ID",
-              "sourceStep": "/api/3/workflow_steps/bf4bb55f-9969-4bfc-ab03-b2c251425f43",
-              "targetStep": "/api/3/workflow_steps/e9d3c84b-e169-462e-8aa8-a64a35004429"
+              "sourceStep": "/api/3/workflow_steps/6d2e3dff-94b5-41f4-a1fa-d85e2c0aa118",
+              "targetStep": "/api/3/workflow_steps/410add49-b28b-434d-84dd-c42fe781b6ec"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "bbbbcea6-bcc7-4b85-aeec-bfccdc7268a5",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "81f2fae3-b31b-477d-9627-6baa99300326",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Retrieve an Endpoint Security assessment status by the assessment ID from cymulate server.",
+          "description": "Retrieve an Endpoint Security assessment status by the assessment ID from Cymulate server.",
           "name": "Get Assessment Status",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -957,16 +957,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/f8502851-7255-41db-ae7b-1ac773d27380",
+          "triggerStep": "/api/3/workflow_steps/9eec1b3e-9538-4ba2-aa54-4011ea6c8e4d",
           "steps": [
             {
-              "uuid": "f8502851-7255-41db-ae7b-1ac773d27380",
+              "uuid": "9eec1b3e-9538-4ba2-aa54-4011ea6c8e4d",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "00ea9fe2-6d3c-4060-adde-e9b077e2852e",
+                "route": "ce60b996-46d2-4148-8805-783febae1dec",
                 "title": "Cymulate Endpoint Security - BAS: Get Assessment Status",
                 "resources": [
                   "alerts"
@@ -986,7 +986,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "30b92969-db46-4aeb-b547-f9940a4c484d",
+              "uuid": "87032c23-c333-4a97-bada-2b8fc383bcec",
               "@type": "WorkflowStep",
               "name": "Get Assessment Status",
               "description": null,
@@ -1008,21 +1008,21 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "aa408d0e-96ca-47bb-90d8-72428ac55390",
+              "uuid": "265d6270-c280-43ad-9c9f-ab19a3829d29",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Get Assessment Status",
-              "sourceStep": "/api/3/workflow_steps/f8502851-7255-41db-ae7b-1ac773d27380",
-              "targetStep": "/api/3/workflow_steps/30b92969-db46-4aeb-b547-f9940a4c484d"
+              "sourceStep": "/api/3/workflow_steps/9eec1b3e-9538-4ba2-aa54-4011ea6c8e4d",
+              "targetStep": "/api/3/workflow_steps/87032c23-c333-4a97-bada-2b8fc383bcec"
             }
           ]
         },
         {
           "@type": "Workflow",
-          "uuid": "70b15007-2f50-4278-a730-5a60f43a9c15",
-          "collection": "/api/3/workflow_collections/2b143b4f-82d0-4219-a0eb-72de4c825b52",
+          "uuid": "4c85f758-3bdb-4a6f-8c2c-f822e7c67b3f",
+          "collection": "/api/3/workflow_collections/60f01649-f5b1-4699-a9be-77447d3dba24",
           "triggerLimit": null,
-          "description": "Stop an Endpoint Security assessment that is running in cymulate.",
+          "description": "Stop an Endpoint Security assessment that is running in Cymulate.",
           "name": "Stop Assessment",
           "tag": "#Cymulate Endpoint Security - BAS",
           "recordTags": [
@@ -1034,16 +1034,16 @@
           "singleRecordExecution": false,
           "parameters": [],
           "synchronous": false,
-          "triggerStep": "/api/3/workflow_steps/6f626a70-a32f-46f2-924e-48bfa572a282",
+          "triggerStep": "/api/3/workflow_steps/3e82150f-bbee-4f3b-9cb0-ed8c04788b79",
           "steps": [
             {
-              "uuid": "6f626a70-a32f-46f2-924e-48bfa572a282",
+              "uuid": "3e82150f-bbee-4f3b-9cb0-ed8c04788b79",
               "@type": "WorkflowStep",
               "name": "Start",
               "description": null,
               "status": null,
               "arguments": {
-                "route": "f9496c13-1465-47a1-8e9f-7c97281ad6c4",
+                "route": "093bb64b-0533-441b-b9c1-ed300f95c2b8",
                 "title": "Cymulate Endpoint Security - BAS: Stop Assessment",
                 "resources": [
                   "alerts"
@@ -1063,7 +1063,7 @@
               "stepType": "/api/3/workflow_step_types/f414d039-bb0d-4e59-9c39-a8f1e880b18a"
             },
             {
-              "uuid": "f3664e56-704e-4e18-9903-9b90d6182faf",
+              "uuid": "900b1575-15c9-40b5-9bfb-54275fc6a7d3",
               "@type": "WorkflowStep",
               "name": "Stop Assessment",
               "description": null,
@@ -1085,12 +1085,12 @@
           "routes": [
             {
               "@type": "WorkflowRoute",
-              "uuid": "f2163dc6-88e4-4c18-aca7-e04c65f5a6d7",
+              "uuid": "187deb52-746a-4574-a4f0-33c267ff96a1",
               "label": null,
               "isExecuted": false,
               "name": "Start-> Stop Assessment",
-              "sourceStep": "/api/3/workflow_steps/6f626a70-a32f-46f2-924e-48bfa572a282",
-              "targetStep": "/api/3/workflow_steps/f3664e56-704e-4e18-9903-9b90d6182faf"
+              "sourceStep": "/api/3/workflow_steps/3e82150f-bbee-4f3b-9cb0-ed8c04788b79",
+              "targetStep": "/api/3/workflow_steps/900b1575-15c9-40b5-9bfb-54275fc6a7d3"
             }
           ]
         }
