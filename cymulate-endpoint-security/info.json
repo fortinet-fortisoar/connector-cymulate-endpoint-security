@@ -2,7 +2,7 @@
   "name": "cymulate-endpoint-security",
   "label": "Cymulate Endpoint Security - BAS",
   "version": "1.0.0",
-  "description": "The Cymulate Exposure Management and Security Validation Platform provides the technology for exposure\ndiscovery, validation, and prioritization with business insights and intelligence. This simplifies security leaders’ risk\nand resilience to emergent threats and a rapidly changing attack surface. With a complete view of the security\nposture and business risks, the Cymulate platform gives security leaders the data they need to define the scope for cyber initiatives, successfully mobilize mitigations, and continuously assess security operations performance.",
+  "description": "Cymulate’s Endpoint Security vector allows organizations to deploy and run simulations of full attack scenario’s e.g. ransomware or implementation of MITRE ATT&CK TTPs on a dedicated endpoint in a controlled and safe manner, comprehensive testing that covers all aspects of endpoint security.",
   "publisher": "Fortinet",
   "cs_approved": false,
   "cs_compatible": true,

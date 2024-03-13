@@ -1,8 +1,5 @@
 ## About the connector
-The Cymulate Exposure Management and Security Validation Platform provides the technology for exposure
-discovery, validation, and prioritization with business insights and intelligence. This simplifies security leaders’ risk
-and resilience to emergent threats and a rapidly changing attack surface. With a complete view of the security
-posture and business risks, the Cymulate platform gives security leaders the data they need to define the scope for cyber initiatives, successfully mobilize mitigations, and continuously assess security operations performance.
+Cymulate’s Endpoint Security vector allows organizations to deploy and run simulations of full attack scenario’s e.g. ransomware or implementation of MITRE ATT&CK TTPs on a dedicated endpoint in a controlled and safe manner, comprehensive testing that covers all aspects of endpoint security.
 <p>This document provides information about the Cymulate Endpoint Security - BAS Connector, which facilitates automated interactions, with a Cymulate Endpoint Security - BAS server using FortiSOAR&trade; playbooks. Add the Cymulate Endpoint Security - BAS Connector as a step in FortiSOAR&trade; playbooks and perform automated operations with Cymulate Endpoint Security - BAS.</p>
 
 ### Version information
